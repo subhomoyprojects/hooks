@@ -1,0 +1,62 @@
+HOOKS :
+
+class component ----> lifecycle methods 
+
+Functional component ---> we have no lifecycle methods.
+Hooks --->  they are pre defined library methods  from 'react' module.
+
+Hooks --- they are the pre defined library methods which are used to 
+work in the functional component.
+
+3 types of important hooks :
+
+1. useState() hooks ---  this hooks is needed to perform state declaration and state updation in functional component.
+
+2. useEffect() hooks  ---this hooks is automatically called after the functional component is rendered. it is an alternate to componentDidMount() / componentDidUpdate()
+
+3.useRef() hooks --- this hooks is needed to work with the reference in a functional component.
+<input type='text' ref=''/> 
+
+import {hooks_name} from 'react';
+
+useState() ---> this hooks is needed to work in a functional component with the 
+state variables.And to update the state variables we also need this hooks.
+
+syntax :
+import {useState} from 'react';
+
+const [var_name,setVar_name]=useState('initial-val');
+
+useEffect() --->  this hooks is needed to work in a functional component after 
+the component is mounted .this hooks is called automatically after the functional
+component is rendered.
+
+import {useEffect} from 'react';
+
+useEffect(
+()=>{ 
+/*task to perform*/
+},[])
+
+useRef() ----> this.callref=React.createRef(); //class component
+This hooks is needed to create the reference of the dom element.
+
+syntax :
+
+import {useRef} from 'react';
+
+const exref=useRef();
+
+useMemo() ---> this hooks is needed to improve the performance of the functional component.
+less the execution time of component good is the performance of the component.
+this hooks is used to memorise return  result of the function.
+this hooks also control the execution of a function .
+
+syntax :
+
+import {useMemo} from 'react';
+
+useMemo(
+()=>{function_name(field_name); }
+,[field_name]//dependency array
+)
